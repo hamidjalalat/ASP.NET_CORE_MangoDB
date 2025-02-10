@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ASP.NET_CORE_MangoDB.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using MongoDB.Driver;
@@ -32,9 +33,15 @@ namespace ASP.NET_CORE_MangoDB.Controllers
         }
 
         // GET: TestMongodb/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
-            return View();
+            var casttoobjectid = ObjectId.Parse(id);
+
+            var filter = Builders<Person>.Filter.Eq(C => C._id, casttoobjectid);
+
+            var result = _collection.Find<Person>(filter).FirstOrDefault();
+
+            return View(result);
         }
 
         // GET: TestMongodb/Create

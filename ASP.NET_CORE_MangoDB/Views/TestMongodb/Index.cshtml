@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ASP.NET_CORE_MangoDB.Controllers.Person>
+﻿@model IEnumerable<Person>
 
 @{
     ViewData["Title"] = "Index";
@@ -32,7 +32,7 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id=item._id.ToString() }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { id = item._id.ToString() }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item._id.ToString() })
             </td>
         </tr>
