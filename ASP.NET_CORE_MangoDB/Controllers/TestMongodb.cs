@@ -12,8 +12,10 @@ namespace ASP.NET_CORE_MangoDB.Controllers
         public TestMongodb(IMongoClient mongoDB)
         {
             _mongoDB = mongoDB;
+
             //اگر این دیتابیس  نباشد میسازد
             _db = _mongoDB.GetDatabase("Persons");
+
             //اگر این کاایشن  نباشد میسازد
             _collection = _db.GetCollection<Person>("Person");
         }
