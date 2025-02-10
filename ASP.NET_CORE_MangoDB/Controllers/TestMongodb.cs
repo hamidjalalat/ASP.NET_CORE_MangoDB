@@ -34,7 +34,6 @@ namespace ASP.NET_CORE_MangoDB.Controllers
             return View(result.ToList());
         }
 
-        // GET: TestMongodb/Details/5
         public ActionResult Details(string id)
         {
             var casttoobjectid = ObjectId.Parse(id);
