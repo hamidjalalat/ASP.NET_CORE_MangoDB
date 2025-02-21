@@ -132,8 +132,12 @@ namespace ASP.NET_CORE_MangoDB.Controllers
             }
             catch
             {
+            //test github
                 return View();
+<<<<<<< HEAD
                 //test repostory
+=======
+>>>>>>> 7d8264f64b2f601fab9a1ce784ceb13843a575d7
             }
         }
     }
