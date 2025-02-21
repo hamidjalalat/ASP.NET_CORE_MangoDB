@@ -132,13 +132,10 @@ namespace ASP.NET_CORE_MangoDB.Controllers
             }
             catch
             {
-                
+         
                 return View();
 
-                //cdsdd
-                //magoli
-                //test repostory
-                //ergrf
+           
 
             }
         }
