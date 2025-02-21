@@ -132,10 +132,6 @@ namespace ASP.NET_CORE_MangoDB.Controllers
             }
             catch
             {
-            //test github
-             //test github2
-                 //test github23
-                 //hhhhh
                 return View();
 
 
